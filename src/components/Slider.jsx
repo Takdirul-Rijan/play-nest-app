@@ -31,7 +31,7 @@ const Slider = () => {
             <a
               key={slide.toyId}
               href={`#slide${slide.toyId}`}
-              className="btn btn-xm"
+              className="btn btn-xm hover:bg-green-400"
             >
               •
             </a>
