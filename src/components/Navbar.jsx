@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
@@ -11,9 +12,16 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-end lg:items-center space-y-2 lg:space-y-0 lg:space-x-6">
-          <span className="hover:text-pink-500 cursor-pointer transition text-gray-700 font-medium">
-            Home
-          </span>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+              isActive ? "text-pink-600 border-b-2 border-pink-500" : ""
+            }
+          >
+            <span className="hover:text-pink-500 cursor-pointer transition text-gray-700 font-medium">
+              Home
+            </span>
+          </NavLink>
           <span className="hover:text-pink-500 cursor-pointer transition text-gray-700 font-medium">
             My Profile
           </span>

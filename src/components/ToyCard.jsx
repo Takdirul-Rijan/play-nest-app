@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router";
 
 const ToyCard = ({ toy }) => {
-  const { toyName, price, rating, availableQuantity, pictureURL } = toy;
+  const { toyId, toyName, price, rating, availableQuantity, pictureURL } = toy;
 
   return (
     <div className="card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
@@ -20,9 +21,12 @@ const ToyCard = ({ toy }) => {
         <p className="text-gray-500 text-sm">Available: {availableQuantity}</p>
 
         <div className="card-actions">
-          <button className="btn btn-sm bg-pink-500 hover:bg-pink-600 border-none text-white font-semibold">
+          <Link
+            to={`/toy/${toyId}`}
+            className="btn btn-sm bg-pink-500 hover:bg-pink-600 border-none text-white font-semibold"
+          >
             View More
-          </button>
+          </Link>
         </div>
       </div>
     </div>
