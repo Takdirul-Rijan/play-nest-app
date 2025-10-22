@@ -1,0 +1,122 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 50,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
+    "pictureURL": "https://www.lego.com/cdn/cs/set/assets/blt31025b7b4b54b9a7/10713.jpg?fit=crop&quality=80&width=400&height=400&dpr=1",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Rubik's Cube",
+    "sellerName": "Puzzle World",
+    "sellerEmail": "contact@puzzleworld.com",
+    "price": 15,
+    "rating": 4.5,
+    "availableQuantity": 150,
+    "description": "Classic 3x3 Rubik's Cube for brain-teasing fun and improving problem-solving skills.",
+    "pictureURL": "https://www.museumofplay.org/app/uploads/2021/08/rubiks-sq.jpg",
+    "subCategory": "Puzzles"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Toy Train Set",
+    "sellerName": "Kids Train Store",
+    "sellerEmail": "info@kidstrain.com",
+    "price": 60,
+    "rating": 4.6,
+    "availableQuantity": 40,
+    "description": "A colorful toy train set that encourages imaginative play and coordination.",
+    "pictureURL": "https://images-cdn.ubuy.co.in/650822a28de68345d2636f6a-wooden-train-set-12-pcs-train-toys.jpg",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Wooden Building Blocks",
+    "sellerName": "Block World",
+    "sellerEmail": "contact@blockworld.com",
+    "price": 25,
+    "rating": 4.4,
+    "availableQuantity": 85,
+    "description": "Eco-friendly wooden blocks to build towers, houses, and fun structures.",
+    "pictureURL": "https://www.habausa.com/cdn/shop/files/extra-large-basic-building-blocks-102pc-1077-ls2_1080x.jpg?v=1709857541",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Toy Robot",
+    "sellerName": "Rick Toys",
+    "sellerEmail": "support@robotoys.com",
+    "price": 35,
+    "rating": 4.3,
+    "availableQuantity": 60,
+    "description": "A fun toy robot with light and sound effects for interactive play.",
+    "pictureURL": "https://st2.depositphotos.com/1010280/8241/i/950/depositphotos_82415744-stock-illustration-robot-toy.jpg",
+    "subCategory": "Robotics"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Toy Dinosaur Set",
+    "sellerName": "Dino Toys",
+    "sellerEmail": "info@dinotoys.com",
+    "price": 20,
+    "rating": 4.2,
+    "availableQuantity": 100,
+    "description": "Realistic toy dinosaur figures perfect for play and learning.",
+    "pictureURL": "https://images-cdn.ubuy.co.in/643cc4c86cf8d35caa3c3383-prextex-12-pack-dinosaur-toys-for-boys.jpg",
+    "subCategory": "Animals"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Stuffed Teddy Bear",
+    "sellerName": "Cuddle Toys",
+    "sellerEmail": "support@cuddlet.com",
+    "price": 13,
+    "rating": 4.8,
+    "availableQuantity": 200,
+    "description": "Soft and cuddly teddy bear perfect for hugs and companionship.",
+    "pictureURL": "https://www.toykingdom.com.ph/cdn/shop/articles/plush_toys_and_stuffed_toys.png?v=1711355340",
+    "subCategory": "Soft Toys"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Toy Car Set",
+    "sellerName": "Mini Vehicles",
+    "sellerEmail": "info@minivehicles.com",
+    "price": 23,
+    "rating": 4.6,
+    "availableQuantity": 90,
+    "description": "A set of miniature toy cars for racing and imaginative play.",
+    "pictureURL": "https://m.media-amazon.com/images/I/91x9Tr-o7pL._AC_SL1500_.jpg",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 9,
+    "toyName": "Play-Doh Set",
+    "sellerName": "Creative Kids",
+    "sellerEmail": "contact@creativekids.com",
+    "price": 10,
+    "rating": 4.5,
+    "availableQuantity": 150,
+    "description": "Colorful Play-Doh set to mold, shape, and create endless fun.",
+    "pictureURL": "https://www.kroger.com/product/images/xlarge/front/0063050959114",
+    "subCategory": "Art & Craft"
+  },
+  {
+    "toyId": 10,
+    "toyName": "Toy Airplane",
+    "sellerName": "Sky Toys",
+    "sellerEmail": "info@skytoys.com",
+    "price": 15,
+    "rating": 4.4,
+    "availableQuantity": 120,
+    "description": "A small toy airplane that flies smoothly when thrown.",
+    "pictureURL": "https://media.istockphoto.com/id/1345252985/photo/plastic-toy-airplane.jpg?s=612x612&w=0&k=20&c=J4EZ2ok4hIjXG3HIJ28gM46wG3ua0a7D7ESXjvEs-Zg=",
+    "subCategory": "Vehicles"
+  }
+]
