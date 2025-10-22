@@ -6,8 +6,6 @@ const PopularToys = () => {
   const data = useLoaderData();
   //   console.log(data);
 
-  const popularToys = data.slice(0, 6);
-
   return (
     <section className="py-10 bg-gradient-to-r from-yellow-50 via-pink-50 to-rose-50">
       <div className="w-11/12 mx-auto">
@@ -16,7 +14,7 @@ const PopularToys = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {popularToys.map((toy) => (
+          {data.map((toy) => (
             <ToyCard key={toy.toyId} toy={toy} />
           ))}
         </div>

@@ -8,7 +8,7 @@
     "rating": 4.7,
     "availableQuantity": 75,
     "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
-    "pictureURL": "https://www.lego.com/cdn/cs/set/assets/blt31025b7b4b54b9a7/10713.jpg?fit=crop&quality=80&width=400&height=400&dpr=1",
+    "pictureURL": "https://www.toyworld.co.nz/cdn/shop/files/10696_boxprod_v29_3500x3500px.jpg?v=1732093974",
     "thumbnail": "https://www.lego.com/cdn/cs/set/assets/blt31025b7b4b54b9a7/10713.jpg?fit=crop&quality=80&width=100&height=100&dpr=1",
     "subCategory": "Building Blocks"
   },
@@ -47,7 +47,7 @@
     "rating": 4.4,
     "availableQuantity": 85,
     "description": "Eco-friendly wooden blocks to build towers, houses, and fun structures.",
-    "pictureURL": "https://www.habausa.com/cdn/shop/files/extra-large-basic-building-blocks-102pc-1077-ls2_1080x.jpg?v=1709857541",
+    "pictureURL": "https://b2b.small-foot.de/media/image/11396_small_foot_legler_holz_baukloetze_50teile_fsc_a.jpg",
     "thumbnail": "https://www.habausa.com/cdn/shop/files/extra-large-basic-building-blocks-102pc-1077-ls2_1080x.jpg?v=1709857541",
     "subCategory": "Building Blocks"
   },
@@ -86,7 +86,7 @@
     "rating": 4.8,
     "availableQuantity": 200,
     "description": "Soft and cuddly teddy bear perfect for hugs and companionship.",
-    "pictureURL": "https://www.toykingdom.com.ph/cdn/shop/articles/plush_toys_and_stuffed_toys.png?v=1711355340",
+    "pictureURL": "https://m.media-amazon.com/images/I/71qHFXa2cmL._AC_SL1500_.jpg",
     "thumbnail": "https://www.toykingdom.com.ph/cdn/shop/articles/plush_toys_and_stuffed_toys.png?v=1711355340",
     "subCategory": "Soft Toys"
   },
@@ -128,5 +128,31 @@
     "pictureURL": "https://media.istockphoto.com/id/1345252985/photo/plastic-toy-airplane.jpg?s=612x612&w=0&k=20&c=J4EZ2ok4hIjXG3HIJ28gM46wG3ua0a7D7ESXjvEs-Zg=",
     "thumbnail": "https://media.istockphoto.com/id/1345252985/photo/plastic-toy-airplane.jpg?s=612x612&w=0&k=20&c=J4EZ2ok4hIjXG3HIJ28gM46wG3ua0a7D7ESXjvEs-Zg=",
     "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 11,
+    "toyName": "Wooden Puzzle Set",
+    "sellerName": "Puzzle Masters",
+    "sellerEmail": "support@puzzlemaster.com",
+    "price": 18,
+    "rating": 4.3,
+    "availableQuantity": 80,
+    "description": "A set of wooden puzzles that helps kids develop problem-solving skills and hand-eye coordination.",
+    "pictureURL": "https://beebeed.com/wp-content/uploads/2017/05/wood-puzzle-set.jpg",
+    "thumbnail": "https://images-cdn.shopify.com/s/files/1/1012/4742/products/wooden-puzzles-thumbnail.jpg",
+    "subCategory": "Puzzles"
+  },
+  {
+    "toyId": 12,
+    "toyName": "RC Helicopter",
+    "sellerName": "Air Toys",
+    "sellerEmail": "contact@airtoys.com",
+    "price": 45,
+    "rating": 4.6,
+    "availableQuantity": 50,
+    "description": "Remote control helicopter for thrilling aerial adventures and fun.",
+    "pictureURL": "https://images-cdn.ubuy.com.sa/648100714cd1656459110ece-goolrc-rc-helicopter-remote-control.jpg",
+    "thumbnail": "https://images-cdn.ozon.ru/s2/sku/1001362354/1001362354.jpg",
+    "subCategory": "Robotics"
   }
 ]
