@@ -47,7 +47,7 @@ const Login = () => {
               </button>
 
               <button className="btn btn-secondary btn-outline w-full">
-                <FcGoogle size={24} /> Login with Google
+                <FcGoogle size={20} /> Login with Google
               </button>
               <p className="pt-5 text-center font-semibold">
                 Don't have an account ?{" "}

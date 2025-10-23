@@ -1,7 +1,9 @@
-import React from "react";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user } = use(AuthContext);
   return (
     <div className="bg-gradient-to-r from-pink-100 via-rose-100 to-yellow-100 shadow-md sticky top-0 z-50">
       <div className="w-11/12 mx-auto flex justify-between items-center py-3">
@@ -33,6 +35,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
+      <h2>{user && user.email}</h2>
     </div>
   );
 };

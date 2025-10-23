@@ -1,8 +1,40 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast, ToastContainer } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
+  const { createUser, setUser } = use(AuthContext);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    // console.log(e.target);
+
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    // console.log(name, photo, email, password);
+
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        // console.log(user);
+        toast("🎉 Registration successful! Welcome to ToyTopia!");
+
+        setUser(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        toast(errorMessage);
+      });
+  };
+
   const [showPassword, setShowPassword] = useState(false);
 
   const handleToggleShowPassword = () => {
@@ -12,7 +44,7 @@ const Register = () => {
     <div className="flex justify-center min-h-screen items-center">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
         <h2 className="font-bold text-xl text-center">Register Your Account</h2>
-        <form>
+        <form onSubmit={handleRegister}>
           <div className="card-body">
             <fieldset className="fieldset">
               <label className="label">Your Name</label>
@@ -21,6 +53,8 @@ const Register = () => {
                 type="text"
                 className="input"
                 placeholder="Enter your name"
+                pattern="[A-Za-z\s]+"
+                title="Please enter letters only"
                 required
               />
 
@@ -48,6 +82,8 @@ const Register = () => {
                   name="password"
                   className="input"
                   placeholder="Password"
+                  pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                  title="Password must have at least 1 uppercase letter, 1 lowercase letter, and be at least 6 characters long"
                   required
                 />
                 <button
@@ -61,6 +97,9 @@ const Register = () => {
               <button type="submit" className="btn btn-primary mt-4">
                 Register
               </button>
+              <button className="btn btn-secondary btn-outline w-full">
+                <FcGoogle size={20} /> Login with Google
+              </button>
               <p className="pt-5 text-center font-semibold">
                 Already have an account ?{" "}
                 <Link to={"/auth/login"} className="text-blue-400">
@@ -71,6 +110,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
