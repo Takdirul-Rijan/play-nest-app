@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const JoinUs = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubscribe = () => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (emailRegex.test(email)) {
-      setMessage("✅ Subscribed!");
-      setEmail("");
-    } else {
-      setMessage("❌ Please enter a valid email address.");
-    }
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    e.target.email.value = "";
+    toast.success("✨ Subscription successful 🎉 Welcome to ToyTopia!");
   };
 
   return (
@@ -26,31 +19,22 @@ const JoinUs = () => {
           exciting toy stories!
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
+        <form
+          onSubmit={handleSubscribe}
+          className="flex flex-col sm:flex-row justify-center items-center gap-3"
+        >
           <input
             type="email"
+            name="email"
             placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            required
             className="input input-bordered w-72 border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
           />
-          <button
-            onClick={handleSubscribe}
-            className="btn bg-pink-500 hover:bg-pink-600 border-none text-white"
-          >
+          <button className="btn bg-pink-500 hover:bg-pink-600 border-none text-white">
             Subscribe
           </button>
-        </div>
-
-        {message && (
-          <p
-            className={`mt-3 font-medium ${
-              message.startsWith("✅") ? "text-green-600" : "text-red-500"
-            }`}
-          >
-            {message}
-          </p>
-        )}
+        </form>
+        <ToastContainer></ToastContainer>
       </div>
     </section>
   );
