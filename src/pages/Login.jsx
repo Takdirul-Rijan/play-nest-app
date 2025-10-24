@@ -6,7 +6,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { signIn } = use(AuthContext);
+  const { signIn, signInWithGoogle } = use(AuthContext);
 
   const location = useLocation();
   // console.log("location", location);
@@ -58,6 +58,23 @@ const Login = () => {
       });
   };
 
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        // setUser(user);
+        Swal.fire({
+          title: "Registration successful! Welcome to ToyTopia!",
+          icon: "success",
+          draggable: true,
+        });
+        navigate("/");
+      })
+      .catch((error) => {
+        // console.log(error);
+      });
+  };
+
   return (
     <div className="flex justify-center min-h-screen items-center">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
@@ -99,7 +116,10 @@ const Login = () => {
           </div>
         </form>
         <div className="flex justify-center">
-          <button className="btn btn-secondary btn-outline w-[336px]">
+          <button
+            onClick={handleGoogleLogin}
+            className="btn btn-secondary btn-outline w-[336px]"
+          >
             <FcGoogle size={20} /> Login with Google
           </button>
         </div>

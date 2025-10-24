@@ -4,9 +4,11 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast, ToastContainer } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
+import Swal from "sweetalert2";
 
 const Register = () => {
-  const { createUser, setUser, updateUser } = use(AuthContext);
+  const { createUser, setUser, updateUser, signInWithGoogle } =
+    use(AuthContext);
 
   const navigate = useNavigate();
 
@@ -34,8 +36,12 @@ const Register = () => {
           .catch((error) => {
             setUser(user);
           });
-
-        toast("🎉 Registration successful! Welcome to ToyTopia!");
+        Swal.fire({
+          title: "Registration successful! Welcome to ToyTopia!",
+          icon: "success",
+          draggable: true,
+        });
+        // toast("🎉Registration successful! Welcome to ToyTopia!");
 
         form.reset();
         navigate("/");
@@ -43,7 +49,12 @@ const Register = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        toast(errorMessage);
+        // toast(errorMessage);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error.message,
+        });
       });
   };
 
@@ -52,6 +63,24 @@ const Register = () => {
   const handleToggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        Swal.fire({
+          title: "Registration successful! Welcome to ToyTopia!",
+          icon: "success",
+          draggable: true,
+        });
+        navigate("/");
+      })
+      .catch((error) => {
+        // console.log(error);
+      });
+  };
+
   return (
     <div className="flex justify-center min-h-screen items-center">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
@@ -114,7 +143,10 @@ const Register = () => {
           </div>
         </form>
         <div className="flex justify-center">
-          <button className="btn btn-secondary btn-outline w-[336px]">
+          <button
+            onClick={handleGoogleLogin}
+            className="btn btn-secondary btn-outline w-[336px]"
+          >
             <FcGoogle size={20} /> Login with Google
           </button>
         </div>
