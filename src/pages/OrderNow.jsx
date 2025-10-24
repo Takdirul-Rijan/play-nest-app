@@ -15,7 +15,7 @@ const PreOrder = () => {
       draggable: true,
     });
 
-    form.reset(); // clear form after submit
+    form.reset();
   };
 
   return (
