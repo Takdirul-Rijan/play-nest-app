@@ -1,12 +1,17 @@
 import React, { use, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
   const { signIn } = use(AuthContext);
+
+  const location = useLocation();
+  // console.log("location", location);
+
+  const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -29,11 +34,15 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         // console.log(user);
+
+        navigate(`${location.state ? location.state : "/"}`);
+
         Swal.fire({
           title: "Signed in successfully",
           icon: "success",
           draggable: true,
         });
+        <Navigate to={"/toy/:id"}></Navigate>;
         form.reset();
       })
       .catch((error) => {

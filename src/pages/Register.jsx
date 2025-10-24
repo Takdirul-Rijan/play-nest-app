@@ -1,12 +1,14 @@
 import React, { use, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast, ToastContainer } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
   const { createUser, setUser } = use(AuthContext);
+
+  const nagigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -24,10 +26,12 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         // console.log(user);
+
         toast("🎉 Registration successful! Welcome to ToyTopia!");
 
         setUser(user);
         form.reset();
+        nagigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
