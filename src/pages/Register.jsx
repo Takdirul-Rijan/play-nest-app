@@ -27,6 +27,7 @@ const Register = () => {
         toast("🎉 Registration successful! Welcome to ToyTopia!");
 
         setUser(user);
+        form.reset();
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -87,6 +88,7 @@ const Register = () => {
                   required
                 />
                 <button
+                  type="button"
                   onClick={handleToggleShowPassword}
                   className=" btn-xs absolute top-3.5 right-7 "
                 >
@@ -97,18 +99,20 @@ const Register = () => {
               <button type="submit" className="btn btn-primary mt-4">
                 Register
               </button>
-              <button className="btn btn-secondary btn-outline w-full">
-                <FcGoogle size={20} /> Login with Google
-              </button>
-              <p className="pt-5 text-center font-semibold">
-                Already have an account ?{" "}
-                <Link to={"/auth/login"} className="text-blue-400">
-                  Login
-                </Link>
-              </p>
             </fieldset>
           </div>
         </form>
+        <div className="flex justify-center">
+          <button className="btn btn-secondary btn-outline w-[336px]">
+            <FcGoogle size={20} /> Login with Google
+          </button>
+        </div>
+        <p className="pt-5 text-center font-semibold">
+          Already have an account ?{" "}
+          <Link to={"/auth/login"} className="text-blue-400">
+            Login
+          </Link>
+        </p>
       </div>
       <ToastContainer></ToastContainer>
     </div>
