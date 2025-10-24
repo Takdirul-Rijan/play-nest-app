@@ -7,6 +7,7 @@ import JoinUs from "../components/JoinUs";
 const Home = () => {
   return (
     <div>
+      <title>Home</title>
       <Slider></Slider>
 
       <PopularToys></PopularToys>

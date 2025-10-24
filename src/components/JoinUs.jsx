@@ -5,7 +5,7 @@ const JoinUs = () => {
   const handleSubscribe = (e) => {
     e.preventDefault();
     e.target.email.value = "";
-    toast.success("✨ Subscription successful 🎉 Welcome to ToyTopia!");
+    toast.success("✨ Subscription successful 🎉 Welcome to PlayNest!");
   };
 
   return (

@@ -31,8 +31,8 @@ const Navbar = () => {
     <div className="bg-gradient-to-r from-pink-100 via-rose-100 to-yellow-100 shadow-md sticky top-0 z-50">
       <div className="w-11/12 mx-auto flex justify-between items-center py-3">
         <div className="flex items-center">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-pink-600 tracking-wide">
-            Toy<span className="text-yellow-500">Topia</span>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-pink-600 tracking-wide ">
+            Play<span className="text-yellow-500">Nest</span>
           </h2>
         </div>
 

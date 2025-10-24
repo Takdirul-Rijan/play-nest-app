@@ -5,7 +5,7 @@ const ChooseUs = () => {
     <section className="py-12 bg-gradient-to-r from-pink-50 via-yellow-50 to-rose-50">
       <div className="w-11/12 mx-auto text-center">
         <h2 className="text-3xl font-bold text-pink-600 mb-8">
-          Why Choose <span className="text-yellow-500">ToyTopia?</span>
+          Why Choose <span className="text-yellow-500">PlayNest?</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

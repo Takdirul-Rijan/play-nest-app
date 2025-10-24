@@ -31,6 +31,7 @@ const ToyDetails = () => {
 
   return (
     <div className="w-11/12 mx-auto py-10">
+      <title>{toy.toyName}</title>
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <img
           src={toy.pictureURL}

@@ -2,7 +2,6 @@ import React, { use, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
-import { toast, ToastContainer } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
 import Swal from "sweetalert2";
 
@@ -37,11 +36,10 @@ const Register = () => {
             setUser(user);
           });
         Swal.fire({
-          title: "Registration successful! Welcome to ToyTopia!",
+          title: "Registration successful! Welcome to PlayNest!",
           icon: "success",
           draggable: true,
         });
-        // toast("🎉Registration successful! Welcome to ToyTopia!");
 
         form.reset();
         navigate("/");
@@ -49,7 +47,7 @@ const Register = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // toast(errorMessage);
+
         Swal.fire({
           icon: "error",
           title: "Oops...",
@@ -70,7 +68,7 @@ const Register = () => {
         const user = result.user;
         setUser(user);
         Swal.fire({
-          title: "Registration successful! Welcome to ToyTopia!",
+          title: "Registration successful! Welcome to PlayNest!",
           icon: "success",
           draggable: true,
         });
@@ -83,6 +81,7 @@ const Register = () => {
 
   return (
     <div className="flex justify-center min-h-screen items-center">
+      <title>Register</title>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
         <h2 className="font-bold text-xl text-center">Register Your Account</h2>
         <form onSubmit={handleRegister}>
@@ -157,7 +156,6 @@ const Register = () => {
           </Link>
         </p>
       </div>
-      <ToastContainer></ToastContainer>
     </div>
   );
 };

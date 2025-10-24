@@ -20,7 +20,7 @@ const Footer = () => {
       >
         <div className="max-w-xs justify-self-center sm:justify-self-start">
           <h2 className="text-2xl font-extrabold text-pink-600 mb-3">
-            Toy<span className="text-yellow-500">Topia</span>
+            Play<span className="text-yellow-500">Nest</span>
           </h2>
           <p className="text-sm leading-relaxed">
             A world of fun and imagination for kids! Discover vibrant toys from
@@ -89,7 +89,7 @@ const Footer = () => {
 
       <div className="border-t border-pink-200 text-center py-3 text-sm">
         © {new Date().getFullYear()}{" "}
-        <span className="font-semibold text-pink-600">ToyTopia</span>. All
+        <span className="font-semibold text-pink-600">PlayNest</span>. All
         rights reserved.
       </div>
     </footer>

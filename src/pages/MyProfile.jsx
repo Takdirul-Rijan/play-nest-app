@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import Loading from "./Loading";
@@ -32,6 +32,7 @@ const MyProfile = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center p-4">
+      <title>My Profile</title>
       <div className="card w-full max-w-md shadow-xl bg-base-100 p-6">
         <h2 className="text-2xl font-bold mb-4 text-center">My Profile</h2>
         <form onSubmit={handleUpdateProfile}>

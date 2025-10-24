@@ -20,6 +20,7 @@ const PreOrder = () => {
 
   return (
     <div className="flex justify-center min-h-screen items-center p-4 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100">
+      <title>Order</title>
       <div className="card w-full max-w-md shadow-2xl bg-white p-6 rounded-2xl border-4 border-pink-300">
         <h2 className="text-3xl font-extrabold mb-2 text-center text-purple-700">
           Order Now
@@ -54,7 +55,7 @@ const PreOrder = () => {
             type="submit"
             className="btn bg-gradient-to-r from-pink-400 to-purple-500 text-white w-full hover:scale-105 transition-transform duration-300"
           >
-            Submit Pre-Order
+            Submit Order
           </button>
         </form>
       </div>
