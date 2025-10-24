@@ -6,9 +6,9 @@ import { toast, ToastContainer } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, updateUser } = use(AuthContext);
 
-  const nagigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -27,11 +27,18 @@ const Register = () => {
         const user = result.user;
         // console.log(user);
 
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+          })
+          .catch((error) => {
+            setUser(user);
+          });
+
         toast("🎉 Registration successful! Welcome to ToyTopia!");
 
-        setUser(user);
         form.reset();
-        nagigate("/");
+        navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;

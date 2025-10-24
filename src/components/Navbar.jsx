@@ -1,11 +1,15 @@
 import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
-import userIcon from "../assets/user.png";
 import Swal from "sweetalert2";
+import Loading from "../pages/Loading";
 
 const Navbar = () => {
-  const { user, logOut } = use(AuthContext);
+  const { user, logOut, loading } = use(AuthContext);
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   const handleLogOut = () => {
     // console.log("LogOut Btn Clicked");
@@ -36,7 +40,9 @@ const Navbar = () => {
           <NavLink
             to={"/"}
             className={({ isActive }) =>
-              isActive ? "text-pink-600 border-b-2 border-pink-500" : ""
+              isActive
+                ? "text-pink-600 bg-white shadow-lg shadow-pink-200/60 border border-pink-300 rounded-xl px-4 py-2 font-semibold scale-105 transition-all duration-300"
+                : ""
             }
           >
             <span className="hover:text-pink-500 cursor-pointer transition text-gray-700 font-medium">
@@ -47,7 +53,12 @@ const Navbar = () => {
             My Profile
           </span>
 
-          <img className="w-12 rounded-full" src={userIcon} alt="" />
+          <img
+            className="w-12 rounded-full hover:cursor-pointer "
+            src={`${user ? user.photoURL : ""}`}
+            alt=""
+            title={user ? user.displayName || user.name : ""}
+          />
 
           {user ? (
             <button
