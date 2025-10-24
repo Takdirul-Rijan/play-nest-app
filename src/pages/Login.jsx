@@ -8,6 +8,8 @@ import Swal from "sweetalert2";
 const Login = () => {
   const { signIn, signInWithGoogle } = use(AuthContext);
 
+  const [emailPrefill, setEmailPrefill] = useState("");
+
   const location = useLocation();
   // console.log("location", location);
 
@@ -89,6 +91,8 @@ const Login = () => {
                 className="input"
                 placeholder="Email"
                 required
+                value={emailPrefill}
+                onChange={(e) => setEmailPrefill(e.target.value)}
               />
               <label className="label">Password</label>
               <div className="relative">
@@ -107,7 +111,13 @@ const Login = () => {
                   {showPassword ? <FaEye /> : <FaEyeSlash />}
                 </button>
               </div>
-              <a className="link link-hover">Forgot password?</a>
+              <Link
+                to="/auth/forgot-password"
+                state={{ email: emailPrefill }}
+                className="link link-hover"
+              >
+                Forgot password?
+              </Link>
 
               <button type="submit" className="btn btn-primary mt-4">
                 Login
