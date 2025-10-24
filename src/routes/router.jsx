@@ -8,6 +8,8 @@ import Register from "../pages/Register";
 import PrivateRoute from "../provider/PrivateRoute";
 import MyProfile from "../pages/MyProfile";
 import ForgotPassword from "../pages/ForgotPassword";
+import OrderNow from "../pages/OrderNow";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/order-now",
+        element: (
+          <PrivateRoute>
+            <OrderNow></OrderNow>
+          </PrivateRoute>
+        ),
+      },
     ],
   },
   {
@@ -58,7 +68,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/*",
-    element: <h2>Error 404</h2>,
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 
