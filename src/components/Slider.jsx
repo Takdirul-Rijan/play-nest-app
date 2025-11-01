@@ -14,6 +14,7 @@ const Slider = () => {
       <div className="w-full h-full relative">
         <Swiper
           navigation={true}
+          loop={true}
           modules={[Navigation]}
           className="mySwiper w-full h-full"
         >

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -33,15 +34,22 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-pink-500 cursor-pointer transition">
-              Home
-            </li>
-            <li className="hover:text-pink-500 cursor-pointer transition">
-              My Profile
-            </li>
-            <li className="hover:text-pink-500 cursor-pointer transition">
-              All Toys
-            </li>
+            <Link to={"/"}>
+              <li className="hover:text-pink-500 cursor-pointer transition">
+                Home
+              </li>
+            </Link>
+
+            <Link to={"/my-profile"}>
+              <li className="hover:text-pink-500 cursor-pointer transition">
+                My Profile
+              </li>
+            </Link>
+            <Link to={"/all-toy"}>
+              <li className="hover:text-pink-500 cursor-pointer transition">
+                All Toys
+              </li>
+            </Link>
             <li className="hover:text-pink-500 cursor-pointer transition">
               Contact Us
             </li>
@@ -71,18 +79,34 @@ const Footer = () => {
             Follow Us
           </h3>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center justify-center sm:justify-start gap-2 hover:text-pink-500 cursor-pointer transition">
+            <a
+              href="https://www.facebook.com/login/"
+              target="_blank"
+              className="flex items-center justify-center sm:justify-start gap-2 hover:text-pink-500 cursor-pointer transition"
+            >
               <FaFacebook /> Facebook
-            </li>
-            <li className="flex items-center justify-center sm:justify-start gap-2 hover:text-pink-500 cursor-pointer transition">
+            </a>
+            <a
+              href="https://www.instagram.com/accounts/login/"
+              target="_blank"
+              className="flex items-center justify-center sm:justify-start gap-2 hover:text-pink-500 cursor-pointer transition"
+            >
               <FaInstagram /> Instagram
-            </li>
-            <li className="flex items-center justify-center sm:justify-start gap-2 hover:text-pink-500 cursor-pointer transition">
+            </a>
+            <a
+              href="https://x.com/i/flow/login"
+              target="_blank"
+              className="flex items-center justify-center sm:justify-start gap-2 hover:text-pink-500 cursor-pointer transition"
+            >
               <FaTwitter /> Twitter
-            </li>
-            <li className="flex items-center justify-center sm:justify-start gap-2 hover:text-pink-500 cursor-pointer transition">
+            </a>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              className="flex items-center justify-center sm:justify-start gap-2 hover:text-pink-500 cursor-pointer transition"
+            >
               <FaYoutube /> YouTube
-            </li>
+            </a>
           </ul>
         </div>
       </div>

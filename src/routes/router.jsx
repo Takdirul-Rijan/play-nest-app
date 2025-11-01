@@ -10,6 +10,7 @@ import MyProfile from "../pages/MyProfile";
 import ForgotPassword from "../pages/ForgotPassword";
 import OrderNow from "../pages/OrderNow";
 import ErrorPage from "../pages/ErrorPage";
+import PopularToys from "../components/PopularToys";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home></Home>,
+        loader: () => fetch("/toydata.json"),
+      },
+      {
+        path: "/all-toy",
+        element: <PopularToys></PopularToys>,
         loader: () => fetch("/toydata.json"),
       },
       {
