@@ -12,6 +12,7 @@ import OrderNow from "../pages/OrderNow";
 import ErrorPage from "../pages/ErrorPage";
 import PopularToys from "../components/PopularToys";
 import AboutUs from "../pages/AboutUs";
+import ContactUs from "../pages/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs></ContactUs>,
       },
       {
         path: "/all-toy",

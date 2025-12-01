@@ -1,8 +1,10 @@
-import React from "react";
+import React, { use } from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Footer = () => {
+  const { user } = use(AuthContext);
   return (
     <footer className="w-11/12 mx-auto bg-gradient-to-r from-yellow-100 via-rose-100 to-pink-100 text-gray-700 shadow-md z-50">
       <div
@@ -39,20 +41,29 @@ const Footer = () => {
                 Home
               </li>
             </Link>
-
-            <Link to={"/my-profile"}>
+            <Link to={"/auth/login"}>
               <li className="hover:text-pink-500 cursor-pointer transition">
-                My Profile
+                Login
               </li>
             </Link>
+
+            {user && (
+              <Link to={"/my-profile"}>
+                <li className="hover:text-pink-500 cursor-pointer transition">
+                  My Profile
+                </li>
+              </Link>
+            )}
             <Link to={"/all-toy"}>
               <li className="hover:text-pink-500 cursor-pointer transition">
                 All Toys
               </li>
             </Link>
-            <li className="hover:text-pink-500 cursor-pointer transition">
-              Contact Us
-            </li>
+            <Link to={"/contact-us"}>
+              <li className="hover:text-pink-500 cursor-pointer transition">
+                Contact Us
+              </li>
+            </Link>
           </ul>
         </div>
 
