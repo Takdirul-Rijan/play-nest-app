@@ -10,9 +10,9 @@ import MyProfile from "../pages/MyProfile";
 import ForgotPassword from "../pages/ForgotPassword";
 import OrderNow from "../pages/OrderNow";
 import ErrorPage from "../pages/ErrorPage";
-import PopularToys from "../components/PopularToys";
 import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
+import AllToys from "../pages/AllToys";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/all-toy",
-        element: <PopularToys></PopularToys>,
+        element: <AllToys></AllToys>,
         loader: () => fetch("/toydata.json"),
       },
       {

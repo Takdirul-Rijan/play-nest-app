@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useLoaderData } from "react-router";
-import ToyCard from "./ToyCard";
+import ToyCard from "../components/ToyCard";
 
-const PopularToys = () => {
+const AllToys = () => {
   const data = useLoaderData();
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortOrder, setSortOrder] = useState(""); // asc or desc
+  const [sortOrder, setSortOrder] = useState("");
 
-  // Filter
   const filteredToys =
     searchQuery.trim() === ""
       ? data
@@ -15,15 +14,14 @@ const PopularToys = () => {
           toy.toyName.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
-  // Sort (default: no sorting)
   const sortedToys = [...filteredToys].sort((a, b) => {
     if (sortOrder === "asc") {
-      return a.price - b.price; // ascending by price
+      return a.price - b.price;
     }
     if (sortOrder === "desc") {
-      return b.price - a.price; // descending by price
+      return b.price - a.price;
     }
-    return 0; // no sort
+    return 0;
   });
 
   return (
@@ -33,7 +31,6 @@ const PopularToys = () => {
           Popular Toys
         </h2>
 
-        {/* Search + Sorting */}
         <div className="mb-8 flex gap-4 justify-center">
           <input
             type="text"
@@ -64,4 +61,4 @@ const PopularToys = () => {
   );
 };
 
-export default PopularToys;
+export default AllToys;
