@@ -7,8 +7,8 @@ const PopularToys = () => {
   //   console.log(data);
 
   return (
-    <section className="py-10 bg-gradient-to-r from-yellow-50 via-pink-50 to-rose-50">
-      <div className="w-11/12 mx-auto">
+    <section className="w-11/12 mx-auto py-10 bg-gradient-to-r from-yellow-50 via-pink-50 to-rose-50">
+      <div className="">
         <h2 className="text-3xl font-bold text-center text-pink-600 mb-8">
           Popular Toys
         </h2>

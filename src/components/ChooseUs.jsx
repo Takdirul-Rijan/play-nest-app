@@ -2,8 +2,8 @@ import React from "react";
 
 const ChooseUs = () => {
   return (
-    <section className="py-12 bg-gradient-to-r from-pink-50 via-yellow-50 to-rose-50">
-      <div className="w-11/12 mx-auto text-center">
+    <section className="w-11/12 mx-auto py-12 bg-gradient-to-r from-pink-50 via-yellow-50 to-rose-50">
+      <div className="text-center">
         <h2 className="text-3xl font-bold text-pink-600 mb-8">
           Why Choose <span className="text-yellow-500">PlayNest?</span>
         </h2>

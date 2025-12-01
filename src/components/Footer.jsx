@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-yellow-100 via-rose-100 to-pink-100 text-gray-700 shadow-md z-50">
+    <footer className="w-11/12 mx-auto bg-gradient-to-r from-yellow-100 via-rose-100 to-pink-100 text-gray-700 shadow-md z-50">
       <div
         className="
           w-11/12 mx-auto py-8

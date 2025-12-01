@@ -9,8 +9,8 @@ const JoinUs = () => {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-r from-yellow-50 via-rose-50 to-pink-50">
-      <div className="w-11/12 mx-auto text-center">
+    <section className="w-11/12 mx-auto py-12 bg-gradient-to-r from-yellow-50 via-rose-50 to-pink-50">
+      <div className=" text-center">
         <h2 className="text-3xl font-bold text-pink-600 mb-4">
           Join Our <span className="text-yellow-500">Toy Lovers Community</span>
         </h2>

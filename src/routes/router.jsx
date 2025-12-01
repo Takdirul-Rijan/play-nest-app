@@ -11,6 +11,7 @@ import ForgotPassword from "../pages/ForgotPassword";
 import OrderNow from "../pages/OrderNow";
 import ErrorPage from "../pages/ErrorPage";
 import PopularToys from "../components/PopularToys";
+import AboutUs from "../pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Home></Home>,
         loader: () => fetch("/toydata.json"),
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs></AboutUs>,
       },
       {
         path: "/all-toy",

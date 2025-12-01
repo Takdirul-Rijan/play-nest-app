@@ -28,12 +28,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-pink-100 via-rose-100 to-yellow-100 shadow-md sticky top-0 z-50">
+    <div className="w-11/12 mx-auto bg-gradient-to-r from-pink-100 via-rose-100 to-yellow-100 shadow-md sticky top-0 z-50">
       <div className="w-11/12 mx-auto flex justify-between items-center py-3">
         <div className="flex items-center">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-pink-600 tracking-wide ">
-            Play<span className="text-yellow-500">Nest</span>
-          </h2>
+          <Link to={"/"}>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-pink-600 tracking-wide ">
+              Play<span className="text-yellow-500">Nest</span>
+            </h2>
+          </Link>
         </div>
 
         <div className="flex flex-col lg:flex-row items-end lg:items-center space-y-2 lg:space-y-0 lg:space-x-6">
@@ -47,6 +49,30 @@ const Navbar = () => {
           >
             <span className="hover:text-pink-500 cursor-pointer transition text-gray-700 font-medium">
               Home
+            </span>
+          </NavLink>
+          <NavLink
+            to={"/about-us"}
+            className={({ isActive }) =>
+              isActive
+                ? "text-pink-600 bg-white shadow-lg shadow-pink-200/60 border border-pink-300 rounded-xl px-4 py-2 font-semibold scale-105 transition-all duration-300"
+                : ""
+            }
+          >
+            <span className="hover:text-pink-500 cursor-pointer transition text-gray-700 font-medium">
+              About Us
+            </span>
+          </NavLink>
+          <NavLink
+            to={"/contact-us"}
+            className={({ isActive }) =>
+              isActive
+                ? "text-pink-600 bg-white shadow-lg shadow-pink-200/60 border border-pink-300 rounded-xl px-4 py-2 font-semibold scale-105 transition-all duration-300"
+                : ""
+            }
+          >
+            <span className="hover:text-pink-500 cursor-pointer transition text-gray-700 font-medium">
+              Contact Us
             </span>
           </NavLink>
 

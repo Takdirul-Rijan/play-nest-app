@@ -1,6 +1,6 @@
 import React, { use } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -10,17 +10,20 @@ const Slider = () => {
   const slider = use(sliderPromise);
 
   return (
-    <section className="w-full h-[80vh] md:h-[90vh] bg-gradient-to-r from-pink-50 via-rose-50 to-yellow-50">
-      <div className="w-full h-full relative">
+    <section className="py-6">
+      <div className="w-11/12 mx-auto h-[50vh] md:h-[65vh] relative">
         <Swiper
-          navigation={true}
           loop={true}
-          modules={[Navigation]}
-          className="mySwiper w-full h-full"
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Navigation, Autoplay]}
+          className="mySwiper w-full h-full rounded-xl overflow-hidden shadow-lg"
         >
           {slider.map((slide) => (
             <SwiperSlide key={slide.toyId}>
-              <div className="w-full h-full relative">
+              <div className="w-full h-full">
                 <img
                   src={slide.pictureURL}
                   alt=""
