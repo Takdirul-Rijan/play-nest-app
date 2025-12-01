@@ -1,0 +1,17 @@
+[
+  {
+    "name": "John Doe",
+    "feedback": "PlayNest has the best collection of toys! My kids are always excited to receive their orders. The quality is top-notch, and the delivery is always on time!",
+    "rating": 5
+  },
+  {
+    "name": "Emily Smith",
+    "feedback": "I love how PlayNest offers toys that are safe and affordable. The customer service was fantastic when I had a query. Highly recommend!",
+    "rating": 4
+  },
+  {
+    "name": "Michael Johnson",
+    "feedback": "Great experience! The toy selection is great, and my son loves every new toy we get. Will definitely continue to shop here.",
+    "rating": 5
+  }
+]

@@ -22,9 +22,11 @@ const Footer = () => {
         "
       >
         <div className="max-w-xs justify-self-center sm:justify-self-start">
-          <h2 className="text-2xl font-extrabold text-pink-600 mb-3">
-            Play<span className="text-yellow-500">Nest</span>
-          </h2>
+          <Link to={"/"}>
+            <h2 className="text-2xl font-extrabold text-pink-600 mb-3">
+              Play<span className="text-yellow-500">Nest</span>
+            </h2>
+          </Link>
           <p className="text-sm leading-relaxed">
             A world of fun and imagination for kids! Discover vibrant toys from
             local sellers and bring smiles to little faces.
